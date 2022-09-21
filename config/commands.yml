@@ -1,0 +1,422 @@
+#                                                                   #
+#      _____                                           _            # 
+#     /  __ \                                         | |           # 
+#     | /  \/ ___  _ __ ___  _ __ ___   __ _ _ __   __| |___        # 
+#     | |    / _ \| '_ ` _ \| '_ ` _ \ / _` | '_ \ / _` / __|       # 
+#     | \__/\ (_) | | | | | | | | | | | (_| | | | | (_| \__ \       # 
+#      \____/\___/|_| |_| |_|_| |_| |_|\__,_|_| |_|\__,_|___/       # 
+#                                                                   # 
+#                                                                   #                                                         
+                                                        
+# This command file is where you can control all of the commands.
+# Here you can disable commands, fine control permissions, and set aliases.
+
+## Tutorial
+  
+#  Below is an example of a command. If you do not specify a command here, we will
+#  use the default options.
+
+#  If you want everyone to have access to a command use '@everyone' as the role (NOTE: the '' must be included!)
+
+example1:           #  The commands name
+  enabled: True     #  Enabled/Disabled (required) (default: True)
+  permissions:      #  Roles with permissions to use this command (optional) (default: '@everyone')
+   - Staff         
+  aliases:          #  Command aliases that can also be used to run the command (optional) (default: NONE)
+   - eg
+   - eg1
+
+example2:
+  enabled: True
+  permissions:
+    - '@everyone'
+  aliases:
+    - eg2
+
+#  Forgot what commands are included that you might want to configure?
+#  You can use the help command in your server, or check out https://commands.zeltux.net
+
+#  Below are some defaults, to get you started off. 
+#  If your a long time user of Zeltux, these are the same as in all our previous updates.
+
+## Zeltux Tip! - Use CTRL+F to search this file for commands!
+
+
+##########################################
+#              Giveaways                 #
+##########################################
+
+gcreate:
+  enabled: True
+  permissions:
+    - Management
+gdelete:
+  enabled: True
+  permissions:
+    - Management
+gend:
+  enabled: True
+  permissions:
+    - Management
+greroll:
+  enabled: True
+  permissions:
+    - Management
+
+##########################################
+#               Economy                  #
+##########################################
+
+bal:
+  enabled: True
+  aliases:
+    - balance
+buy:
+  enabled: True
+deposit:
+  enabled: True
+shop:
+  enabled: True
+top:
+  enabled: True
+withdraw:
+  enabled: True
+work:
+  enabled: True
+  
+##########################################
+#             Fun & Games                #
+##########################################
+
+8ball:
+  enabled: True
+  aliases:
+    - eightball
+asciiart:
+  enabled: True
+avatar:
+  enabled: True
+fact:
+  enabled: True
+flip:
+  enabled: True
+hug:
+  enabled: True
+joke:
+  enabled: True
+meme:
+  enabled: True
+numbergen:
+  enabled: True
+poll:
+  enabled: True
+rate:
+  enabled: True
+roll:
+  enabled: True
+rps:
+  enabled: True
+slap:
+  enabled: True
+fotd:
+  enabled: True
+xmas:
+  enabled: True
+
+##########################################
+#             Moderation                 #
+##########################################
+
+ban:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+banlist:
+  enabled: True
+clear:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+history:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+  aliases:
+    - infractions
+kick:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+lockdown:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+mute:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+report:
+  enabled: True 
+say:
+  enabled: True
+  permissions:
+    - Management
+shout:
+  enabled: True
+  permissions:
+    - Management
+slowmode:
+  enabled: True
+  permissions:
+    - Management
+speak:
+  enabled: True
+  permissions:
+    - Management
+tempmute:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+unban:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+unmute:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+unwarn:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+warn:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+warnings:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+
+##########################################
+#                Music                   #
+##########################################
+
+leave:
+  enabled: True
+  aliases:
+    - stop
+pause:
+  enabled: True
+play:
+  enabled: True
+queue:
+  enabled: True
+resume:
+  enabled: True
+search:
+  enabled: True
+skip:
+  enabled: True
+  permissions:
+    - Staff
+    - Management
+volume:
+  enabled: True
+  aliases:
+    - vol
+voteskip:
+  enabled: True
+
+##########################################
+#               Tickets                  #
+##########################################
+
+add:
+  enabled: True
+  permissions:
+    - Management
+close:
+  enabled: True
+delete:
+  enabled: True
+  permissions:
+    - Management
+forcedelete:
+  enabled: True
+  permissions:
+    - Management
+lower:
+  enabled: True
+  permissions:
+    - Management
+new:
+  enabled: True
+notice:
+  enabled: True
+  permissions:
+    - Management
+raise:
+  enabled: True
+  permissions:
+    - Management
+remove:
+  enabled: True
+  permissions:
+    - Management
+reopen:
+  enabled: True
+  permissions:
+    - Management
+ticketpanel:
+  enabled: True
+  permissions:
+    - Management
+transcript:
+  enabled: True
+voiceticket:
+  enabled: True
+  permissions:
+    - Management
+
+##########################################
+#              Utilities                 #
+##########################################
+
+addrole:
+  enabled: True
+  permissions:
+    - Management
+announce:
+  enabled: True
+  permissions:
+    - Management
+apply:
+  enabled: True
+bot:
+  enabled: True
+botlinks:
+  enabled: True
+botstats:
+  enabled: True
+bugreport:
+  enabled: True
+channelinfo:
+  enabled: True
+decode:
+  enabled: True
+donate:
+  enabled: True
+encode:
+  enabled: True
+help:
+  enabled: True
+hexcolour:
+  enabled: True
+invites:
+  enabled: True
+latency:
+  enabled: True
+links:
+  enabled: True
+lmgtfy:
+  enabled: True
+ping:
+  enabled: True
+pwdgen:
+  enabled: True
+removerole:
+  enabled: True
+  permissions:
+    - Management
+roleinfo:
+  enabled: True
+rr:
+  enabled: True
+  permissions:
+    - Management
+serverinfo:
+  enabled: True
+snipe:
+  enabled: True
+social:
+  enabled: True
+suggest:
+  enabled: True
+toascii:
+  enabled: True
+topinvites:
+  enabled: True
+usercount:
+  enabled: True
+userinfo:
+  enabled: True
+verifypanel:
+  enabled: True
+  permissions:
+    - Management
+weather:
+  enabled: True
+
+##########################################
+#                Levels                  #
+##########################################
+
+leaderboard:
+  enabled: True
+level:
+  enabled: True
+xpadd:
+  enabled: True
+  permissions:
+    - Management
+xpremove:
+  enabled: True
+  permissions:
+    - Management
+xpreset:
+  enabled: True
+  permissions:
+    - Management
+xpset:
+  enabled: True
+  permissions:
+    - Management
+
+##########################################
+#               Management               #
+##########################################
+
+reload:
+  enabled: True
+  permissions:
+    - Management
+setprefix:
+  enabled: True
+  permissions:
+    - Management
+setstatus:
+  enabled: True
+  permissions:
+    - Management
+setstatustype:
+  enabled: True
+  permissions:
+    - Management
+# The below commands are set to owner only.
+setup:
+  enabled: True
+update:
+  enabled: True 

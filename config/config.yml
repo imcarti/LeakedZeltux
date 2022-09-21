@@ -1,0 +1,340 @@
+
+#                                                                #
+#           __________     .__   __                              #
+#           \____    /____ |  |_/  |_ __ _____  ___              #
+#             /     // __ \|  |\   __\  |  \  \/  /              #
+#           /     /\  ___/|  |_|  | |  |  />    <                #
+#           /_______ \___  >____/__| |____//__/\_ \              #
+#                   \/   \/        v1.5.2        \/              #
+#                                                                #
+#     Created By Matt                                            #
+#     Developed by Matt & Azono                                  #
+#                                                                #
+#     Redistributing or leaking Zeltux is a criminal offence     #
+#     and you can and will be prosecuted for doing it.           #
+#                                                                #
+#     Find out more about our licensing and terms in             #
+#     the LICENCE file.                                          #
+#                                                                #
+
+#----------------------------------------------------------------#
+#                            SETUP                               #
+#----------------------------------------------------------------#
+
+setup:
+
+  # When setting up your bot, enter the bots token and your server ID below
+  token: "bot_token"
+  serverID: "server_id" # Speech marks ("") must be used in v1.5.2+
+
+#----------------------------------------------------------------#
+#                          SETTINGS                              #
+#----------------------------------------------------------------#
+
+# Change the main settings of the bot.
+
+colour: "FF0062"
+prefix: "-"
+
+# Change bot branding.
+
+serverName: "Zeltux"
+botName: "Zeltux"
+footer: "© Zeltux | Owned by Matt | Developed by Matt & Azono"
+
+statusMessage: "-help"
+# Types : PLAYING, STREAMING, LISTENING or WATCHING
+statusType: "PLAYING"
+
+liveConsoleLog: True
+
+# Pick a channel for commands to be ran in - leave empty for any channel
+# Example: ["bot-commands", "general"] 
+commandChannels: []
+# Commands that ignore the command channel
+bypassCommands: ["gcreate", "gend", "gdelete", "greroll", "add", "remove", "lower", "raise", "close", "reopen",
+                 "delete", "forcedelete", "ticketpanel", "transcript", "voiceticket", "clear", "slowmode", "lockdown", "announce"]
+
+# Add ID's of users who will not be able to use
+# the bots commands. e.g. 227937678779294380
+blackList: []
+
+#----------------------------------------------------------------#
+#                          FEATURES                              #
+#----------------------------------------------------------------#
+
+# Disable or enable core functions of the bot.
+
+enabledFeatures:
+  fun: True
+  moderation: True
+  tickets: True
+  utilities: True
+  giveaways: True
+  economy: True
+  levels: True
+  music: True
+
+#----------------------------------------------------------------#
+#                        JOIN / LEAVE                            #
+#----------------------------------------------------------------#
+
+# Edit welcome and leave messages
+
+autoRoles:
+  - "Member"
+
+joinMessage: True
+joinChannel: "welcome"
+welcomeMsg: "We hope you enjoy your stay!"
+
+leaveMessage: True
+leaveChannel: "welcome"
+leaveMsg: "They will be missed."
+showRolesInLeaveMessage: True
+
+# Enable and use the verifiction system
+
+verificationSystem: False
+verificationRole: "test"
+verificationChannel: "verify"
+verifyPanelEmoji: "✅"
+
+#----------------------------------------------------------------#
+#                      ROLES / CHANNELS                          #
+#----------------------------------------------------------------#
+
+# Change the bot's core roles
+
+mutedRole: "Muted"
+
+# Add roles of people who can do the following:
+
+viewVerifyChannel:
+  - "Management"
+talkInVerifyChannel:
+  - "Management"
+
+viewLogsChannel:
+  - "Management"
+
+exemptFromPunishments:
+  - "Staff"
+  - "Management"
+
+
+# Change the bot's core channels
+
+logChannel: "logs"
+reportChannel: "logs"
+bugChannel: "logs"
+
+#----------------------------------------------------------------#
+#                          TICKETS                               #
+#----------------------------------------------------------------#
+
+# Toggle & edit the ticket system
+
+ticketCategory: "tickets"
+ticketPanelEmoji: "🎟️"
+maxTicketsPerUser: 1
+dmTicketTranscripts: True
+
+# Add roles of people who can do the following:
+
+canSeeTicket:
+  - "Staff"
+  - "Management"
+canSeeRaisedTicket:
+  - "Management"
+canSeeClosedTicket:
+  - "Management"
+
+enableCategories: False
+ticketCategories:
+  - name: "Sales"
+    emoji: "💰"
+    category: "sales"
+    roles:
+      - "Management"
+      - "Sales Team"
+  - name: "Other"
+    emoji: "🎟️"
+    category: "tickets"
+    roles:
+      - "Management"
+      - "Staff"
+
+#----------------------------------------------------------------#
+#                         APPLICATIONS                           #
+#----------------------------------------------------------------#
+
+# Set application questions
+
+applicationSystem: False
+applicationCategory: "tickets"
+applicationChannel: "logs"
+applicationPosition: "Moderator"
+applicationQuestions:
+  - "Question 1?"
+  - "Question 2?"
+  - "Question 3?"
+
+canSeeApplication:
+  - "Management"
+
+#----------------------------------------------------------------#
+#                          ECONOMY                               #
+#----------------------------------------------------------------#
+
+# Change economy settings
+
+economy:
+  currency: "$"
+  workCooldown: 300000
+
+  jobs: [
+    # Title, Min Pay, Max Pay
+    ["engineer", 0, 400],
+    ["constructor", 0, 400],
+    ["cook", 0, 400],
+    ["technician", 0, 400],
+    ["police", 0, 400],
+    ["doctor", 0, 400]
+  ]
+
+  roleShop: [
+    # Role, Cost
+    ["Bronze", 4000],
+    ["Silver", 5500],
+    ["Gold", 7000]
+  ]
+
+#----------------------------------------------------------------#
+#                          OTHER                                 #
+#----------------------------------------------------------------#
+
+# Levels
+
+# Enable and edit the leveling system
+
+levelSystem: True
+
+# Pick which channel to send level up
+# messages to, or use set to blank "" to be the
+# current channel
+levelChannel: ""
+
+levelCoolDown: 30000
+levelMaxPoints: 15
+
+# Invites
+
+inviteSystemEnabled: True
+
+# Suggestions
+
+replyToSuggestions:
+  - "Management"
+suggestionChannel: "suggestions"
+
+suggestions:
+  accept: "✅"
+  deny: "❎"
+  upvote: "👍"
+  downvote: "👎"
+
+# Giveaways
+
+giveaways:
+  botsCanWin: False
+  ignoreIfHasPermission: []
+  reaction: "🎉"
+
+# YouTube
+
+youtubeUpdatesSystemEnabled: False
+youtubeChannelIds:
+  - "UCshwRhftzkiov5wKR7M_LsQ"
+youtubeUpdatesChannel: "general"
+
+#----------------------------------------------------------------#
+#                            LINKS                               #
+#----------------------------------------------------------------#
+
+# Edit your server social links
+
+social:
+  facebook:
+  twitter:
+  instagram:
+  youtube:
+  twitch:
+
+online:
+  website:
+  forums:
+  donate:
+
+#----------------------------------------------------------------#
+#                          FILTERS                               #
+#----------------------------------------------------------------#
+
+# Swear Filter
+
+swearFilterEnabled: True
+swearWords: ["fuck","shit","piss","dick","fucker","cock","cunt","bitch","whore","arse",
+            "bastard","wanker","bullshit","nigger","slut","choad","chode"]
+swearBypassRoles:
+  - "Management"
+swearBypassChannels:
+  - "logs"
+
+# Invite Filter
+
+inviteFilterEnabled: True
+inviteBypassRoles:
+  - "Management"
+inviteBypassChannels:
+  - "logs"
+
+# Antispam Filter
+
+antiSpamEnabled: True
+antispamMessageLimit: 5
+antispamTimeLimit: 100000
+antiSpamMuteTime: 30000
+spamBypassRoles:
+  - "Management"
+spamBypassChannels:
+  - "logs"
+
+#----------------------------------------------------------------#
+#                            IMAGES                              #
+#----------------------------------------------------------------#
+
+# Edit the GIFS that the bot displays.
+
+slap:
+  - "https://media.giphy.com/media/TA9NZjiqCIOTC/giphy.gif"
+  - "https://media.giphy.com/media/xT8qB7Sbwskk27Rdy8/giphy.gif"
+  - "https://media.giphy.com/media/lX03hULhgCYQ8/giphy.gif"
+  - "https://media.giphy.com/media/u8maN0dMhVWPS/giphy.gif"
+  - "https://media.giphy.com/media/l41lZEoYn6z1uc2fS/giphy.gif"
+
+hug:
+  - "https://media.giphy.com/media/EvYHHSntaIl5m/giphy.gif"
+  - "https://media.giphy.com/media/QbkL9WuorOlgI/giphy.gif"
+  - "https://media.giphy.com/media/yidUzriaAGJbsxt58k/giphy.gif"
+  - "https://media.giphy.com/media/roVZxEfHaVCWA/giphy.gif"
+  - "https://media.giphy.com/media/vTtibSrt4dlIc/giphy.gif"
+
+#----------------------------------------------------------------#
+#                          ADVANCED                              #
+#----------------------------------------------------------------#
+
+# Do not change unless you know what your doing
+
+debugMode: False
+
+# © Zeltux Discord Bot | Do Not Copy

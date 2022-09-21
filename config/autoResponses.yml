@@ -1,0 +1,69 @@
+
+#                                                                                       #  
+#                     _          _____                                                  #  
+#          /\        | |        |  __ \                                                 #  
+#         /  \  _   _| |_ ___   | |__) |___  ___ _ __   ___  _ __  ___  ___  ___        #  
+#        / /\ \| | | | __/ _ \  |  _  // _ \/ __| '_ \ / _ \| '_ \/ __|/ _ \/ __|       #  
+#       / ____ \ |_| | || (_) | | | \ \  __/\__ \ |_) | (_) | | | \__ \  __/\__ \       #  
+#      /_/    \_\__,_|\__\___/  |_|  \_\___||___/ .__/ \___/|_| |_|___/\___||___/       #  
+#                                               | |                                     #  
+#                                               |_|                                     #  
+#                                                                                       #  
+#                                                                                       # 
+
+## Tutorial
+
+# Example 1 - Normal Message
+
+example1:                      # A unique name for the auto response
+  trigger: exampleResponse1    # The message the user must send for the response to be initiated
+  deleteTrigger: True          # Delete the trigger message after the user has been sent (True/False)
+  response:                    # The response to the user should be:
+    message: hello world       # A message saying 'hello world'
+
+# Example 2 - Embed Message
+
+exmaple2:                                           #  A unique name for the auto response
+  trigger: exampleResponse2                         #  The message the user must send for the response to be initiated
+  deleteTrigger: True                               #  Delete the trigger message after the user has been sent (True/False)
+  response:                                         #  The response to the user should be:
+    embed:                                          #  An embed with the following:
+      title: Embed Title                            #  Title (optional)
+      description: Embed Description                #  Description (optional)
+      colour: FF0062                                #  Colour (optional)
+      footer:                                       #  Footer with:  (optional)
+        message: Embed Footer                       #    Message (required for footer)
+        icon: https://imgur.com/3fCKb3Z.png         #    Icon (optional)
+      author:                                       #  Author with:  (optional)
+        message: Embed Author                       #    Message (required for author)
+        icon: https://imgur.com/3fCKb3Z.png         #    Icon (optional)
+        url: https://zeltux.net                     #    URL (optional)
+      image: https://imgur.com/3fCKb3Z.png          #  Image (optional)
+      thumbnail: https://imgur.com/3fCKb3Z.png      #  Thumbnail (optional)
+      timestamp: True                               #  Timestamp (optional) (True/False)
+      url: https://zeltux.net                       #  URL (optional)
+      fields:                                       #  Fields:  (optional)
+        - title: Field 1 Title                      #   Title (required for fields)
+          message: Field 1 Message                  #   Message (required for fields)
+          inline: True                              #   Inline (optional)
+        - title: Field 2 Title                      #   Title (required for fields)
+          message: Field 2 Message                  #   Message (required for fields)
+          inline: True                              #   Inline (optional)
+
+# All fields marked optional, that you don't want to use, can be deleted.
+# For example, a very basic embed could be:
+
+example3:
+  trigger: exampleResponse3
+  deleteTrigger: False
+  response:
+    embed:
+      title: Embed Title
+      description: Embed Description
+      colour: FF0062
+    
+## Key Points To Note:
+
+#  -  Fields 'trigger', 'deleteTrigger' and 'response' are always required.
+#  -  The name of the auto response (e.g. 'example3') must be unique.
+#  -  Response can only contain 'message' or 'embed'.                      
